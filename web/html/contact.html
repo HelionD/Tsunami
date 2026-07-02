@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Tsunami</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo-tsunami.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="icon" href="index.html">
+                <img src="../img/logo-tsunami-bgremove.png" alt="Tsunami Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>Get in Touch</h1>
+            <p>Have a question, idea, or issue? We'd love to hear from you. The Tsunami team typically responds within 24 hours.</p>
+        </section>
+
+        <section class="contact-section">
+            <!-- Left -->
+            <div class="contact-info">
+                <div>
+                    <h2>Reach us directly</h2>
+                    <p>Choose the channel that works best for you. We're active on GitHub and always watching our inbox.</p>
+                </div>
+
+                <a class="contact-channel" href="mailto:tsunami.project.dev@gmail.com">
+                    <div class="channel-icon">📧</div>
+                    <div class="channel-info">
+                        <strong>Email</strong>
+                        <span>tsunami.project.dev@gmail.com</span>
+                    </div>
+                </a>
+
+                <a class="contact-channel" href="https://github.com/HelionD/Tsunami.git/issues" target="_blank" rel="noopener noreferrer">
+                    <div class="channel-icon">🐛</div>
+                    <div class="channel-info">
+                        <strong>GitHub Issues</strong>
+                        <span>Bug reports &amp; feature requests</span>
+                    </div>
+                </a>
+
+                <a class="contact-channel" href="https://github.com/HelionD/Tsunami.git/discussions" target="_blank" rel="noopener noreferrer">
+                    <div class="channel-icon">💬</div>
+                    <div class="channel-info">
+                        <strong>GitHub Discussions</strong>
+                        <span>Community Q&amp;A &amp; ideas</span>
+                    </div>
+                </a>
+
+                <a class="contact-channel" href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">
+                    <div class="channel-icon">⭐</div>
+                    <div class="channel-info">
+                        <strong>Star on GitHub</strong>
+                        <span>Support the project</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Right -->
+            <div class="contact-form-card">
+                <h2>Send a message</h2>
+
+                <!-- Success message -->
+                <div class="success-msg" id="successMsg">
+                    <div class="success-icon">🌊</div>
+                    <h3>Message sent!</h3>
+                    <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+                </div>
+
+                <!-- Form -->
+                <form id="tsunami-form" action="https://formspree.io/f/meenwqzy" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="loremipsum@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a topic…</option>
+                            <option>Bug report</option>
+                            <option>Feature request</option>
+                            <option>General question</option>
+                            <option>Contributing / PR</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="github-badge">
+        <a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">⭐ Star Tsunami on GitHub</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <p><strong>Tsunami Chaos Engine</strong></p>
+                <p>Chaos engineering tools for testing resilience, uptime, and error handling in real systems.</p>
+            </div>
+            <div class="footer-project">
+                <p>Ready to ship resilient apps? Use this project to simulate failures, learn system behavior, and improve reliability.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Tsunami. Built for developers, SREs, and reliability teams.</p>
+            <p>Fork on GitHub and help build a more resilient system.</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

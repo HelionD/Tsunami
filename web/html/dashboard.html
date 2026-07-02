@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Tsunami</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo-tsunami.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="icon" href="index.html">
+                <img src="../img/logo-tsunami-bgremove.png" alt="Tsunami Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-screen" id="authScreen">
+            <div class="auth-wrapper">
+
+                <!-- Brand panel -->
+                <div class="auth-brand">
+                    <div>
+                        <div class="auth-brand-logo">🌊 Tsunami</div>
+                        <h2>Resilience starts with knowing your limits</h2>
+                        <p>Sign in to access your chaos experiments, monitor system health, and run fault-injection playbooks.</p>
+                        <ul class="auth-features">
+                            <li><span>⚡</span><span>Real-time fault injection</span></li>
+                            <li><span>📊</span><span>Live system dashboards</span></li>
+                            <li><span>🛡️</span><span>Auto-rollback guardrails</span></li>
+                            <li><span>📄</span><span>Automated post-mortems</span></li>
+                        </ul>
+                    </div>
+                    <p style="font-size:0.8rem;opacity:0.6;">Open-source &amp; free forever.</p>
+                </div>
+
+                <!-- Form panel -->
+                <div class="auth-form-panel">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" onclick="switchTab('signin')">Sign In</button>
+                        <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
+                    </div>
+
+                    <!-- Sign In -->
+                    <div class="auth-form active" id="signinForm">
+                        <h3>Welcome back</h3>
+                        <p class="subtitle">Sign in to your Tsunami account</p>
+
+                        <div class="field">
+                            <label for="si-email">Email</label>
+                            <input type="email" id="si-email" placeholder="you@example.com">
+                        </div>
+                        <div class="field">
+                            <label for="si-password">Password</label>
+                            <input type="password" id="si-password" placeholder="••••••••">
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+
+                        <button class="auth-btn" onclick="handleSignIn()">Sign In</button>
+
+                        <div class="divider">or</div>
+                        <button class="github-auth-btn" onclick="handleSignIn()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                            </svg>
+                            Continue with GitHub
+                        </button>
+
+                        <p class="terms-note">By signing in you agree to our Terms of Service and Privacy Policy.</p>
+                    </div>
+
+                    <!-- Sign Up -->
+                    <div class="auth-form" id="signupForm">
+                        <h3>Create your account</h3>
+                        <p class="subtitle">Start chaos engineering in minutes — it's free</p>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="su-first">First name</label>
+                                <input type="text" id="su-first" placeholder="Ada">
+                            </div>
+                            <div class="field">
+                                <label for="su-last">Last name</label>
+                                <input type="text" id="su-last" placeholder="Lovelace">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="su-email">Email</label>
+                            <input type="email" id="su-email" placeholder="you@example.com">
+                        </div>
+                        <div class="field">
+                            <label for="su-password">Password</label>
+                            <input type="password" id="su-password" placeholder="Min. 8 characters">
+                        </div>
+
+                        <button class="auth-btn" onclick="handleSignIn()">Create Account</button>
+
+                        <div class="divider">or</div>
+                        <button class="github-auth-btn" onclick="handleSignIn()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                            </svg>
+                            Sign up with GitHub
+                        </button>
+
+                        <p class="terms-note">By creating an account you agree to our Terms of Service and Privacy Policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ DASHBOARD (shown after auth) ══ -->
+        <div class="dashboard-screen" id="dashboardScreen">
+            <div class="dash-hero">
+                <div class="dash-hero-inner">
+                    <div>
+                        <h1>👋 Welcome back, <span id="dashUserName">Engineer</span></h1>
+                        <p>All systems nominal. Your last experiment ran 2 hours ago.</p>
+                    </div>
+                    <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;">
+                        <div class="dash-status">
+                            <div class="status-dot"></div>
+                            All systems healthy
+                        </div>
+                        <button class="logout-btn" onclick="handleLogout()">Log Out</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-body">
+                <!-- Stats -->
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-label">Experiments run</div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-sub">+3 this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Pass rate</div>
+                        <div class="stat-value">87%</div>
+                        <div class="stat-sub">↑ 4% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Services monitored</div>
+                        <div class="stat-value">6</div>
+                        <div class="stat-sub">Across 2 clusters</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Rollbacks</div>
+                        <div class="stat-value">2</div>
+                        <div class="stat-sub">100% auto-recovered</div>
+                    </div>
+                </div>
+
+                <!-- Main grid -->
+                <div class="dash-grid">
+                    <!-- Recent experiments -->
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Recent Experiments</h3>
+                            <button class="card-action">View all →</button>
+                        </div>
+                        <div class="experiment-list">
+                            <div class="experiment-item">
+                                <div class="exp-icon">📡</div>
+                                <div class="exp-info">
+                                    <strong>Network Latency – API Gateway</strong>
+                                    <span>2 hours ago · 5 min run</span>
+                                </div>
+                                <span class="exp-badge badge-pass">Passed</span>
+                            </div>
+                            <div class="experiment-item">
+                                <div class="exp-icon">💾</div>
+                                <div class="exp-info">
+                                    <strong>Memory Pressure – Auth Service</strong>
+                                    <span>Yesterday · 3 min run</span>
+                                </div>
+                                <span class="exp-badge badge-warn">Degraded</span>
+                            </div>
+                            <div class="experiment-item">
+                                <div class="exp-icon">🔌</div>
+                                <div class="exp-info">
+                                    <strong>Service Outage – DB Replica</strong>
+                                    <span>2 days ago · 10 min run</span>
+                                </div>
+                                <span class="exp-badge badge-pass">Passed</span>
+                            </div>
+                            <div class="experiment-item">
+                                <div class="exp-icon">⚙️</div>
+                                <div class="exp-info">
+                                    <strong>CPU Spike – Worker Nodes</strong>
+                                    <span>Running now…</span>
+                                </div>
+                                <span class="exp-badge badge-run">Running</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Quick Launch</h3>
+                        </div>
+                        <div class="quick-grid">
+                            <button class="quick-btn"><span>📡</span><span>Network Delay</span></button>
+                            <button class="quick-btn"><span>💾</span><span>Memory Leak</span></button>
+                            <button class="quick-btn"><span>🔌</span><span>Service Kill</span></button>
+                            <button class="quick-btn"><span>🔥</span><span>CPU Spike</span></button>
+                            <button class="quick-btn"><span>🌐</span><span>DNS Failure</span></button>
+                            <button class="quick-btn"><span>📝</span><span>Custom Script</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="github-badge">
+        <a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">⭐ Star Tsunami on GitHub</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <p><strong>Tsunami Chaos Engine</strong></p>
+                <p>Chaos engineering tools for testing resilience, uptime, and error handling in real systems.</p>
+            </div>
+            <div class="footer-project">
+                <p>Ready to ship resilient apps? Use this project to simulate failures, learn system behavior, and improve reliability.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Tsunami. Built for developers, SREs, and reliability teams.</p>
+            <p>Fork on GitHub and help build a more resilient system.</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Tsunami</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo-tsunami.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="icon" href="index.html">
+                <img src="../img/logo-tsunami-bgremove.png" alt="Tsunami Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>About Tsunami</h1>
+            <p>An open-source chaos engineering tool. Break your system on your terms — before production does it for you.</p>
+        </section>
+
+        <section class="about-section">
+
+            <!-- Mission -->
+            <div class="mission-card">
+                <div>
+                    <span class="badge">Our Mission</span>
+                    <h2>Break things before they break you</h2>
+                    <p>Tsunami is an open-source chaos engineering tool for anyone responsible for keeping systems reliable — from developers to SREs, and everyone in between. No enterprise pricing, no black-box tooling — just raw, controlled chaos you can understand, fork, and improve.</p>
+                </div>
+                <div class="mission-visual">🌊</div>
+            </div>
+
+            <!-- v1 features -->
+            <div class="section-label">What's in v1 — Available Now</div>
+            <h2 class="section-title">Built, real, and ready to use</h2>
+            <p class="section-sub">These are the features that actually exist in v1. No vaporware, no future promises hiding here.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="v1-chip">v1 ✓</span>
+                    <div class="feature-icon">🔥</div>
+                    <h3>CPU Spike Simulation</h3>
+                    <p>Intentionally spike CPU usage on target processes or Kubernetes pods to see how your application handles high compute pressure. Configurable intensity and duration.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="v1-chip">v1 ✓</span>
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fault Tolerance Testing</h3>
+                    <p>Trigger controlled failures and observe how your system recovers. Test circuit breakers, retry logic, and fallback mechanisms under real stress conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="v1-chip">v1 ✓</span>
+                    <div class="feature-icon">💾</div>
+                    <h3>Stress Testing</h3>
+                    <p>Push memory and resource limits to their edges. Identify breaking points before they surface in production where it actually costs you.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="v1-chip">v1 ✓</span>
+                    <div class="feature-icon">☸️</div>
+                    <h3>Kubernetes Pod Stressing</h3>
+                    <p>Target specific pods inside your Kubernetes cluster. Stress individual services without taking down your whole environment.</p>
+                </div>
+            </div>
+
+            <div class="roadmap">
+                <div class="section-label">Public Roadmap</div>
+                <h2 class="section-title">Where we're going</h2>
+                <p class="section-sub">This is an open-source project. Every version is a community effort — contribute to shape what gets built next.</p>
+
+                <div class="roadmap-track">
+                    <div class="roadmap-card active">
+                        <span class="version-tag">Version 1 — Current</span>
+                        <h3>Local &amp; Kubernetes Chaos</h3>
+                        <ul class="roadmap-list">
+                            <li><span class="check">✓</span> CPU spike simulation</li>
+                            <li><span class="check">✓</span> Fault tolerance testing</li>
+                            <li><span class="check">✓</span> Memory stress testing</li>
+                            <li><span class="check">✓</span> Kubernetes pod stressing</li>
+                            <li><span class="check">✓</span> Open-source &amp; self-hosted</li>
+                        </ul>
+                        <span class="status-pill">🟢 Live now</span>
+                    </div>
+
+                    <div class="roadmap-card upcoming">
+                        <span class="version-tag">Version 2 — Coming Next</span>
+                        <h3>Cloud Integration</h3>
+                        <ul class="roadmap-list">
+                            <li><span class="check">→</span> AWS fault injection</li>
+                            <li><span class="check">→</span> GCP &amp; Azure support</li>
+                            <li><span class="check">→</span> Managed cloud pod stressing</li>
+                            <li><span class="check">→</span> Cloud-native dashboards</li>
+                            <li><span class="check">→</span> Multi-region experiments</li>
+                        </ul>
+                        <span class="status-pill">🔵 In planning</span>
+                    </div>
+
+                    <div class="roadmap-card future">
+                        <span class="version-tag">Version 3 — Future</span>
+                        <h3>Offensive Simulation</h3>
+                        <ul class="roadmap-list">
+                            <li><span class="check">→</span> DDoS simulation</li>
+                            <li><span class="check">→</span> Network flood testing</li>
+                            <li><span class="check">→</span> Traffic amplification tests</li>
+                            <li><span class="check">→</span> Rate limiting validation</li>
+                            <li><span class="check">→</span> WAF &amp; CDN stress tests</li>
+                        </ul>
+                        <span class="status-pill">⚪ Planned</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contribute CTA -->
+            <div class="contribute-card">
+                <div>
+                    <h2>This is your project too</h2>
+                    <p>Tsunami is fully open-source. Found a bug? Have an idea for v2 or v3? Open an issue, submit a PR, or start a discussion. Every contribution counts.</p>
+                </div>
+                <a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer" class="contribute-btn">
+                    ⭐ Contribute on GitHub
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="github-badge">
+        <a href="https://github.com/HelionD/Tsunami.git" target="_blank" rel="noopener noreferrer">⭐ Star Tsunami on GitHub</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <p><strong>Tsunami Chaos Engine</strong></p>
+                <p>Chaos engineering tools for testing resilience, uptime, and error handling in real systems.</p>
+            </div>
+            <div class="footer-project">
+                <p>Ready to ship resilient apps? Use this project to simulate failures, learn system behavior, and improve reliability.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Tsunami. Built for developers, SREs, and reliability teams.</p>
+            <p>Fork on GitHub and help build a more resilient system.</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+</body>
+</html>
